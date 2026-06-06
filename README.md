@@ -1,6 +1,6 @@
 # FastAPI + Mailexam
 
-Minimal [FastAPI](https://fastapi.tiangolo.com/) example that sends test mail through [Mailexam](https://mailexam.ru/) SMTP via the Python standard library [`smtplib`](https://docs.python.org/3/library/smtplib.html).
+Minimal [FastAPI](https://fastapi.tiangolo.com/) example that sends test mail through [Mailexam](https://mailexam.io/) SMTP via the Python standard library [`smtplib`](https://docs.python.org/3/library/smtplib.html).
 
 Based on the [Mailexam FastAPI guide](https://wiki.mailexam.ru/en/examples/fastapi/).
 
@@ -15,7 +15,7 @@ From your Mailexam welcome email or dashboard:
 |----------|-------------|
 | `MAILEXAM_LOGIN` | SMTP login (for example, `xxxxx`) |
 | `MAILEXAM_PASSWORD` | SMTP password (paired with the login) |
-| Host | `{MAILEXAM_LOGIN}.mailexam.ru` (built automatically in code) |
+| Host | `{MAILEXAM_LOGIN}.mailexam.io` (built automatically in code) |
 
 ## Quick start (host)
 
@@ -118,13 +118,13 @@ variables:
   MAIL_FROM: "noreply@example.test"
 ```
 
-After sending a message in a test, verify delivery via the [Mailexam API](https://mailexam.ru/api).
+After sending a message in a test, verify delivery via the [Mailexam API](https://mailexam.io/api).
 
 ## Troubleshooting
 
 **TLS or connection error**
 
-- Host must be `{login}.mailexam.ru`, where `{login}` matches `MAILEXAM_LOGIN`.
+- Host must be `{login}.mailexam.io`, where `{login}` matches `MAILEXAM_LOGIN`.
 - Login and password must come from the same Mailexam project.
 - For port **587** call `starttls()` before `login()`.
 
@@ -146,4 +146,4 @@ After sending a message in a test, verify delivery via the [Mailexam API](https:
 - [Mailexam FastAPI guide (wiki)](https://wiki.mailexam.ru/en/examples/fastapi/)
 - [Flask reference implementation](https://github.com/mailexam/Flask) — same `mail.py` module, synchronous route
 - [FastAPI documentation](https://fastapi.tiangolo.com/)
-- [Mailexam API documentation](https://mailexam.ru/api)
+- [Mailexam API documentation](https://mailexam.io/api)
